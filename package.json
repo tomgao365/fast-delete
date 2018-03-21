@@ -1,0 +1,17 @@
+{
+  "name": "fast-delete",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "repository": "git@github.com:tomgao365/fast-delete.git",
+  "author": "Tom Gao <tom@tomgao.cc>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "iconv-lite": "^0.4.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "npm install reg",
+    "reg": "node ./src/reg.js"
+  }
+}
