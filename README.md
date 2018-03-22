@@ -5,7 +5,7 @@
 * [node.js](https://nodejs.org)，推荐 8.x 版本
 
 ## 使用说明
-* 首次使用，在项目根目录执行 ```npm install``` 命令，会在根目录生成 ```build``` 注册表文件
+* 首次使用，在项目根目录执行 ```npm install``` 命令或执行运行 ```install.bat``` ，会在根目录生成 ```build``` 注册表文件
 ```
 -build
   -install.reg 添加注册表

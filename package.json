@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "npm install reg",
+    "postinstall": "npm run reg",
     "reg": "node ./src/reg.js"
   }
 }
