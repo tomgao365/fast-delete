@@ -2,7 +2,7 @@
   "name": "fast-delete",
   "version": "1.0.0",
   "main": "./src/index.js",
-  "repository": "git@github.com:tomgao365/fast-delete.git",
+  "repository": "https://github.com/tomgao365/fast-delete.git",
   "author": "Tom Gao <tom@tomgao.cc>",
   "license": "MIT",
   "dependencies": {
