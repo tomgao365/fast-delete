@@ -9,12 +9,14 @@ if (args.length === 0) {
 try {
   console.log('被删除文件夹路径如下：');
   const startData = new Date();
-  args.forEach((file) => {
+  args.forEach(file => {
     console.log(`  ${file}`);
     fs.removeSync(file);
   });
   const endData = new Date();
-  console.log(`删除工作完成，耗时${(endData.getTime()-startData.getTime())/1000}秒`);
+  console.log(
+    `删除工作完成，耗时${(endData.getTime() - startData.getTime()) / 1000}秒`
+  );
 } catch (error) {
   console.log(error.message || '删除失败！');
 }
