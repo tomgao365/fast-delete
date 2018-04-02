@@ -1,5 +1,5 @@
 # fast-delete
-利用 node.js 的 fs 模块，实现快速删除 node_modules、Android 项目等一些目录结构比较深或小文件比较多的文件夹，比自带删除快 N 倍。
+利用 node.js 的 fs 模块，实现快速删除 node_modules、Android 项目等一些目录结构比较深或小文件比较多的文件夹，比自带删除快多倍。
 ## 使用环境
 * windows 系统
 * [node.js](https://nodejs.org)，推荐 8.x 版本
