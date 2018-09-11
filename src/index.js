@@ -1,4 +1,5 @@
-const fs = require('fs-extra');
+const rimraf = require('rimraf');
+const ora = require('ora');
 
 const [, , ...args] = process.argv;
 if (args.length === 0) {
@@ -6,17 +7,18 @@ if (args.length === 0) {
   return;
 }
 
+console.log(`共计 ${args.length} 个删除选项`);
 try {
-  console.log('被删除文件夹路径如下：');
-  const startData = new Date();
   args.forEach(file => {
-    console.log(`  ${file}`);
-    fs.removeSync(file);
+    const startData = new Date();
+    const spinner = ora(`${file} 删除中...`).start();
+    rimraf(file, function () {
+      const endData = new Date();
+      spinner.succeed(
+        `${file} 删除完成，耗时${(endData.getTime() - startData.getTime()) / 1000}秒`
+      );
+    })
   });
-  const endData = new Date();
-  console.log(
-    `删除工作完成，耗时${(endData.getTime() - startData.getTime()) / 1000}秒`
-  );
 } catch (error) {
   console.log(error.message || '删除失败！');
 }

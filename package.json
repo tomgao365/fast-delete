@@ -6,8 +6,10 @@
   "author": "Tom Gao <tom@tomgao.cc>",
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "^5.0.0",
-    "iconv-lite": "^0.4.19"
+    "fs-extra": "^7.0.0",
+    "iconv-lite": "^0.4.19",
+    "ora": "^3.0.0",
+    "rimraf": "^2.6.2"
   },
   "devDependencies": {},
   "scripts": {
