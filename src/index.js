@@ -12,10 +12,15 @@ try {
   args.forEach(file => {
     const startData = new Date();
     const spinner = ora(`${file} 删除中...`).start();
-    rimraf(file, function () {
-      const endData = new Date();
+    rimraf(file, {
+      maxBusyTries: 20
+    }, function (error) {
+      if (error) {
+        spinner.fail(`${file} 删除失败: ${error.message}`);
+        return;
+      }
       spinner.succeed(
-        `${file} 删除完成，耗时${(endData.getTime() - startData.getTime()) / 1000}秒`
+        `${file} 删除完成，耗时${(new Date().getTime() - startData.getTime()) / 1000}秒`
       );
     })
   });
