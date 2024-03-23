@@ -3,9 +3,11 @@
 ## 使用环境
 * windows 系统
 * [node.js](https://nodejs.org)，推荐 14+ 版本
+* [pnpm](https://pnpm.io/)
 
 ## 使用说明
-* 首次使用，在项目根目录执行 ```npm install``` 命令或直接运行 ```install.bat``` ，会在根目录生成 ```build``` 注册表文件
+* 未安装 `pnpm` 需要先执行 `npm install -g pnpm`
+* 首次使用，在项目根目录执行 ```pnpm install``` 命令或直接运行 ```install.bat``` ，会在根目录生成 ```build``` 注册表文件
 ```
 -build
   -install.reg 添加注册表
