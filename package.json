@@ -1,19 +1,22 @@
 {
   "name": "fast-delete",
-  "version": "1.0.0",
-  "main": "./src/index.js",
+  "version": "2.0.0",
+  "main": "./index.js",
   "repository": "https://github.com/tomgao365/fast-delete.git",
   "author": "Tom Gao <tom@tomgao.cc>",
   "license": "MIT",
+  "engines": {
+    "node": ">=14.14"
+  },
   "dependencies": {
-    "fs-extra": "^7.0.0",
-    "iconv-lite": "^0.4.19",
-    "ora": "^3.0.0",
-    "rimraf": "^2.6.2"
+    "fs-extra": "^11.2.0",
+    "iconv-lite": "^0.6.3",
+    "ora": "^5.4.1",
+    "rimraf": "^5.0.5"
   },
   "devDependencies": {},
   "scripts": {
     "postinstall": "npm run reg",
-    "reg": "node ./src/reg.js"
+    "reg": "node ./build_reg.js"
   }
 }

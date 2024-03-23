@@ -2,9 +2,9 @@ const path = require('path');
 const fs = require('fs-extra');
 const iconv = require('iconv-lite');
 
-const installPath = path.resolve(__dirname, '../build/install.reg');
-const installClosePath = path.resolve(__dirname, '../build/install-close.reg');
-const uninstallPath = path.resolve(__dirname, '../build/uninstall.reg');
+const installPath = path.resolve(__dirname, 'build/install.reg');
+const installClosePath = path.resolve(__dirname, 'build/install-close.reg');
+const uninstallPath = path.resolve(__dirname, 'build/uninstall.reg');
 
 function getInstallReg(canClose = false) {
   const option = canClose ? '/c' : '/k';
@@ -13,13 +13,13 @@ function getInstallReg(canClose = false) {
 
   [HKEY_CLASSES_ROOT\\*\\shell\\FastDelete]
   @="快速删除"
-  
+
   [HKEY_CLASSES_ROOT\\*\\shell\\FastDelete\\command]
   @="${cmd}"
-  
+
   [HKEY_CLASSES_ROOT\\Folder\\shell\\FastDelete]
   @="快速删除"
-  
+
   [HKEY_CLASSES_ROOT\\Folder\\shell\\FastDelete\\command]
   @="${cmd}"`;
 }
