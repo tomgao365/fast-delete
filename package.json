@@ -18,5 +18,6 @@
   "scripts": {
     "postinstall": "npm run reg",
     "reg": "node ./build_reg.js"
-  }
+  },
+  "packageManager": "pnpm@9.4.0"
 }
